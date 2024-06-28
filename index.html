@@ -15,62 +15,81 @@
 <style>
 </style>
 <body> 
-<section class="bar">
-        <div class="navbar bg-slate-800 fixed bg-opacity-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-36">
-                  <li><a href="portfolio1.html">Window</a></li>
-                  <li><a href="Myskills.html">My Skills</a></li>
-                  <li><a href="newport2.html">About Me</a></li>
-                  <li><a href=""></a></li>
+<section class="bar fixed w-full">
+  <div class="bg-gray-100">
+
+    <div class="overflow-hidden bg-gray-200">
+        <!-- Sidebar -->
+        <div class="absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+            id="sidebar">
+            <!-- Your Sidebar Content -->
+            <div class="p-4">
+                <h1 class="text-2xl font-semibold text-cyan-400">Sidebar</h1>
+                <ul class="mt-4">
+                    <li class="mb-2"><a href="index.html" class="block hover:text-indigo-400">Home</a></li>
+                    <li class="mb-2"><a href="Myskills.html" class="block hover:text-indigo-400">My skills</a></li>
+                    <li class="mb-2"><a href="newport2.html" class="block hover:text-indigo-400">About me</a></li>
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Contact</a></li>
                 </ul>
-              </div>
-            </div>
-            <div class="navbar-center">
-                <box-icon name='sketch' type='logo' rotate='90' animation='tada' color='#e8dede' ></box-icon> 
-              <a class="btn btn-ghost text-xl ">B_beaver</a>
-            </div>
-            <div class="navbar-end">
-              <ul class="menu menu-horizontal bg-gray-900 rounded-box">
-                <li>
-                  <a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(247, 242, 242, 1);transform: ;msFilter:;"><path d="m19.684 5.821-9-3.272A1.998 1.998 0 0 0 8 4.428v6.129A3.953 3.953 0 0 0 6 10c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4V4.428L19 7.7v6.856A3.962 3.962 0 0 0 17 14c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4V7.7c0-.838-.529-1.594-1.316-1.879zM6 16c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm11 4c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"></path></svg>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                  </a>
-                </li>
-              </ul>          
             </div>
         </div>
+
+        <!-- Content -->
+        
+            <!-- Navbar -->
+            <div class="bg-slate-800 shadow">
+                <div class="container mx-auto">
+                    <div class="flex justify-between items-center py-4 px-2 bg-slate-800 h-28">
+                        <h1 class="text-2xl font-semibold">Wongmueng Lo</h1>
+
+                        <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Content Body -->
+            
+        
+    </div>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+    const openSidebarButton = document.getElementById('open-sidebar');
+    
+    openSidebarButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebar.classList.toggle('-translate-x-full');
+    });
+
+    // Close the sidebar when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
+            sidebar.classList.add('-translate-x-full');
+        }
+    });
+    </script>
+
+</div>
       </section>   
 <!-- <div class="w-full bg-gray-900" style="height: 3400px;"> -->
 <!------------------- section1  ------------------->
 </div>
 
 <section id="window" class="bg-gray-900 flex" style="height: 824px; ">
-  <div style="margin-left: 184px; ">
-    <p class="first flex text-4xl text-white font-mono" style="margin-top: 218px;">Wongmueng L.</p>
-    <p class="second flex text-6xl text-cyan-400 font-mono" style="padding-top: 30px;">Fullstack </p>
-    <p class="text-4xl text-cyan-600 font-mono flex">Developer</p>
-    <button class=" btn glass rounded-full bg-cyan-500 text-white shadow-lg z-[]"  style="margin-top: 62px; margin-right: 20px;" ><a href="newport2.html">About Me</a></button>
-    <button class=" btn glass rounded-full bg-gray-400 shadow-lg text-white" style="margin-top: 62px;">link</button>
+  <div style="margin-left: 250px; margin-top: 100px;">
+    <p class="first flex text-7xl text-white font-mono" style="margin-top: 218px;">Wongmueng L.</p>
+    <p class="second flex text-8xl text-cyan-400 font-mono ml-[100px] mt-10" style="padding-top: 30px;">Fullstack </p>
+    <p class="text-6xl text-cyan-600 font-mono flex ml-[200px] mt-10">Developer</p>
+    <button class=" btn glass rounded-full bg-cyan-500 text-white text-3xl shadow-lg z-[] w-60 h-24 mt-24"  style=" margin-right: 20px;" ><a href="newport2.html">About Me</a></button>
+    <button class=" btn glass rounded-full bg-gray-400 shadow-lg text-white text-3xl w-60 h-24" style="margin-top: 62px;">link</button>
     
     
   </div>
   <div>
-    <img class="" style="margin-left: 150px; margin-right:20px; width: 230px; margin-top: 200px; " src="picture/mypicx2.png" alt="">
+    <img class="" style="margin-left: 550px; margin-right:20px; width: 400px; margin-top: 250px; " src="picture/mypicx2.png" alt="">
   </div>
 <!-- <video class="w-full h-full bg-center" width="320" height="240" playinline autoplay muted loop >
   <source src="picture/158384-816637349_small.mp4" type="video/mp4">  
@@ -82,44 +101,44 @@
 
 <!---------------- section2 --------------------->
 <section class="bg-gray-900 flex" style="height: 824px; ">
-  <div style="margin-left: 124px; margin-right: 124px;">
-    <p class="first flex text-5xl text-white font-mono" style="margin-top: 10px;">About</p><p class="second flex text-4xl text-cyan-400 font-mono" style="padding-top: 0px;">Me.</p>
-    <p class="text-lg mt-6 text-white font-Playfair">Hello,My Nickname is Beaver.As a high school student with a strong passion for coding, technology, and piano, I am a highly motivated and self-driven individual. My journey in the world of technology began early on, and I have continually honed my skills through self-learning and various projects. With a unique blend of technical expertise and musical creativity, I bring a harmonious and innovative approach to every project I undertake.<a class="link-hover ml-3 text-cyan-300" href="newport2.html">More about me . . . </a></p>
-    <p class="text-lg mt-6 text-white">สวัสดีครับ นี่คือเว็บสะสมผลงานของผม ผมเป็นนักเรียนชั้นม.6 โรงเรียนเทพศิรินท์ ถึงแผนการเรียนผมจะเป็นสายศิลป์-ภาษา แต่ผมก็ชื่นชอบในเทคโนโลยีจึงได้เริ่มศึกษาภาษาโปรแกรมต่างๆ ไลบรารี่และเฟรมเวิร์คแล้วเริ่มลงมือทำชิ้นงานจริงทั้งด้วยตัวเองและร่วมกับเพื่อน สำหรับผมที่มีงานอดิเรกคือการเล่นเปียโน โค้ดดิ้งก็เหมือนกับการบรรเลงเพลงเพราะเราได้สร้างงานชิ้นหนึ่งขึ้นมาใหม่ด้วยจินตนาการ<a class="link-hover ml-3 text-cyan-300" href="newport2.html">รู้จักผมมากขึ้น . . . </a></p>
+  <div style=" margin-right: 124px; margin-left: 255px; " >
+    <p class="first flex text-6xl text-white font-mono" style="margin-top: 250px;">About</p><p class="second flex text-4xl text-cyan-400 font-mono" style="padding-top: 26px;">Me.</p>
+    <p class="text-2xl mt-6 text-white font-Playfair mt-[6%]">Hello,My Nickname is Beaver.As a high school student with a strong passion for coding, technology, and piano, I am a highly motivated and self-driven individual. My journey in the world of technology began early on, and I have continually honed my skills through self-learning and various projects. With a unique blend of technical expertise and musical creativity, I bring a harmonious and innovative approach to every project I undertake.<a class="link-hover ml-3 text-cyan-300" href="newport2.html">More about me . . . </a></p>
+    <p class="text-2xl mt-6 text-white mt-[8%]">สวัสดีครับ นี่คือเว็บสะสมผลงานของผม ผมเป็นนักเรียนชั้นม.6 โรงเรียนเทพศิรินท์ ถึงแผนการเรียนผมจะเป็นสายศิลป์-ภาษา แต่ผมก็ชื่นชอบในเทคโนโลยีจึงได้เริ่มศึกษาภาษาโปรแกรมต่างๆ ไลบรารี่และเฟรมเวิร์คแล้วเริ่มลงมือทำชิ้นงานจริงทั้งด้วยตัวเองและร่วมกับเพื่อน สำหรับผมที่มีงานอดิเรกคือการเล่นเปียโน โค้ดดิ้งก็เหมือนกับการบรรเลงเพลงเพราะเราได้สร้างงานชิ้นหนึ่งขึ้นมาใหม่ด้วยจินตนาการ<a class="link-hover ml-3 text-cyan-300" href="newport2.html">รู้จักผมมากขึ้น . . . </a></p>
     
 </section>
 <!-- section3 -->
-<section class="bg-gray-900 flex h-[1024px] flex-col ">
-  <div class="ml-[124px]">
-    <p class="flex text-4xl text-white font-mono mt-[218px]">My recent work</p>
-    <a href="#" class="btn glass rounded-full bg-cyan-500 text-white shadow-lg mt-[62px] mr-[20px] w-[82px] h-[47px]">All</a>
+<section class="bg-gray-900 flex h-[824px] flex-col ">
+  <div class="ml-[250px]">
+    <p class="flex text-6xl text-white font-mono mt-[218px]">My recent work</p>
+    <a href="#" class="btn glass rounded-full bg-cyan-500 text-white text-2xl shadow-lg mt-[62px] mr-[20px] w-[150px] h-[65px]">All</a>
     
   
-    <button class="btn glass rounded-full bg-cyan-500 text-white shadow-lg mt-[62px] mr-[20px] w-[82px] h-[47px]">UI</button>
-    <button class="btn glass rounded-full bg-cyan-500 text-white shadow-lg mt-[62px] mr-[20px] w-[82px] h-[47px]">UX</button>
-    <button class="btn glass rounded-full bg-cyan-500 text-white shadow-lg mt-[62px] w-[92px] h-[47px]">My skills</button>
+    <button class="btn glass rounded-full bg-cyan-500 text-white shadow-lg mt-[62px] mr-[20px] w-[150px] h-[65px] text-2xl">UI</button>
+    <button class="btn glass rounded-full bg-cyan-500 text-white shadow-lg mt-[62px] mr-[20px] w-[150px] h-[65px] text-2xl">UX</button>
+    <button class="btn glass rounded-full bg-cyan-500 text-white shadow-lg mt-[62px] w-[150px] h-[65px] text-2xl">My skills</button>
   </div>
   <!---------- box------------- -->
-  <div class="flex ml-[13%] mt-24 items-center justify-center">
-    <div class="backdrop-sepia-0 rounded-2xl w-72 h-72 bg-white/30 mr-[28px]">
+  <div class="flex ml-[3%] mt-24 items-center justify-center">
+    <div class="backdrop-sepia-0 rounded-2xl w-96 h-64 bg-white/30 mr-[5%] ml-[5%]">
         <div class>
-          <img src="picture/555555.png" alt="">
+          <img src="picture/S__15409154.jpg" alt="">
         </div>
     </div>
-    <div class="backdrop-sepia-0 rounded-2xl w-72 h-72 bg-white/30 mr-[28px] ml-[20px]">
+    <div class="backdrop-sepia-0 rounded-2xl w-96 h-64 bg-white/30 mr-[10%] ml-[5%]">
         <div>
-          <img src="picture/maxresdefault.jpg" alt="">
+          <img src="picture/IMG_0137.jpg" alt="">
         </div>
     </div>
-    <div class="backdrop-sepia-0 rounded-2xl w-72 h-72 bg-white/30 mr-[28px] ml-[20px]">
+    <div class="backdrop-sepia-0 rounded-2xl w-96 h-64 bg-white/30 mr-[5%] ">
       <div>
-        <img src="picture/8cf1d471486237.5bc70b1847a12.png" alt="">
+        <img src="picture/IMG_9290.jpg" alt="">
       </div>
     </div>
   </div>
 </section>
 <!---------------- footer -------------------->
-<footer class="footer footer-center p-10 bg-slate-800 text-base-content rounded">
+<footer class="footer footer-center p-10 bg-slate-800 text-base-content rounded text-2xl">
   <nav class="grid grid-flow-col gap-4">
     <a class="link link-hover">About us</a>
     <a class="link link-hover">Contact</a>
