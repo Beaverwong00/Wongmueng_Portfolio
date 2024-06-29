@@ -12,83 +12,65 @@
 
 </head>
 <body>
-<section class="bar">
-        <div class="navbar bg-slate-800 fixed">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-36">
-                  <li><a href="portfolio1.html">Window</a></li>
-                  <li><a href="Myskills.html">My Skills</a></li>
-                  <li><a href="newport2.html">About me</a></li>
-                  
-                </ul>
+  <section class="bar fixed w-full">
+    <div class="bg-gray-100">
+  
+      <div class="overflow-hidden bg-gray-200">
+          <!-- Sidebar -->
+          <div class="absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+              id="sidebar">
+              <!-- Your Sidebar Content -->
+              <div class="p-4">
+                  <h1 class="text-2xl font-semibold text-cyan-400">Sidebar</h1>
+                  <ul class="mt-4">
+                      <li class="mb-2"><a href="index.html" class="block hover:text-indigo-400">Home</a></li>
+                      <li class="mb-2"><a href="Myskills.html" class="block hover:text-indigo-400">My skills</a></li>
+                      <li class="mb-2"><a href="newport2.html" class="block hover:text-indigo-400">About me</a></li>
+                      
+                  </ul>
               </div>
-            </div>
-            <div class="navbar-center">
-                <box-icon name='sketch' type='logo' rotate='90' animation='tada' color='#e8dede' ></box-icon> 
-              <a class="btn btn-ghost text-xl ">My Portfolio</a>
-            </div>
-            <div class="navbar-end">
-              <ul class="menu menu-horizontal bg-gray-900 rounded-box">
-                <li>
-                  <a>
-                    <audio src="picture/JVKE - golden hour (official music video) (64).mp3"  ></audio><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(247, 242, 242, 1);transform: ;msFilter:;"><path d="m19.684 5.821-9-3.272A1.998 1.998 0 0 0 8 4.428v6.129A3.953 3.953 0 0 0 6 10c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4V4.428L19 7.7v6.856A3.962 3.962 0 0 0 17 14c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4V7.7c0-.838-.529-1.594-1.316-1.879zM6 16c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm11 4c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"></path></svg>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                  </a>
-                </li>
-              </ul>          
-            </div>
-        </div>
-      </section>
-<section id="window" class="bg-gray-900 flex items-center flex-col overflow-auto" style="height: 1550px; ">
-  <div class=" text-center ">
-    <p class="first flex text-4xl text-white font-mono" style="margin-top: 120px;">My skills</p></div>
-    <div class="flex ml-[28px] mt-24 items-center justify-center flex-col ">
-      <div class="backdrop-sepia-0 rounded-2xl w-[700px] h-96 bg-white/30 mr-[28px] ">
-        <div class="">
-          <img src="picture/55555.png" alt="">
-        </div>
+          </div>
+  
+          <!-- Content -->
+          
+              <!-- Navbar -->
+              <div class="bg-slate-800 shadow">
+                  <div class="container mx-auto">
+                      <div class="flex justify-between items-center py-4 px-2 bg-slate-800 h-28">
+                          <h1 class="text-2xl font-semibold text-cyan-400">Wongmueng Loachai</h1>
+  
+                          <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
+                          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                          </svg>
+                      </button>
+                      </div>
+                  </div>
+              </div>
+              <!-- Content Body -->
+              
+          
       </div>
-        
-        <!-- first -->
-        <div class="backdrop-sepia-0 rounded-2xl w-[700px] h-96 bg-white/30 mr-[28px] mt-10">
-          <div class="">
-            <img src="picture/555555.png" alt="">
-          </div>
-          <div class="">
-            <img src="picture/555555.png" alt="">
-          </div>
-          <div class="">
-            <img src="picture/555555.png" alt="">
-          </div>
-        </div>
-          <!-- seccont -->
-          <div class="backdrop-sepia-0 rounded-2xl w-[700px] h-96 bg-white/30 mr-[28px] mt-10">
-            <div class="w-5 rounded-box">
-              <img src="picture/555555.png" alt="">
-            </div>
-            <div class="">
-              <img src="picture/555555.png" alt="">
-            </div>
-            <div class="">
-              <img src="picture/555555.png" alt="">
-            </div>
-        </div>
-      </div>
-    </div>
-</section>
+  
+      <script>
+          const sidebar = document.getElementById('sidebar');
+      const openSidebarButton = document.getElementById('open-sidebar');
+      
+      openSidebarButton.addEventListener('click', (e) => {
+          e.stopPropagation();
+          sidebar.classList.toggle('-translate-x-full');
+      });
+  
+      // Close the sidebar when clicking outside of it
+      document.addEventListener('click', (e) => {
+          if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
+              sidebar.classList.add('-translate-x-full');
+          }
+      });
+      </script>
+  
+  </div>
+        </section> 
 
 
 
