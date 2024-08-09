@@ -12,71 +12,93 @@
     <script src="newport.js"></script>
 </head>
 <body>
-  <section class="bar fixed w-full">
+  <section class="bar fixed w-full z-50">
     <div class="bg-gray-100">
-  
       <div class="overflow-hidden bg-gray-200">
-          <!-- Sidebar -->
-          <div class="absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
-              id="sidebar">
-              <!-- Your Sidebar Content -->
-              <div class="p-4">
-                <h1 class="text-4xl font-semibold text-cyan-400">Sidebar</h1>
-                <ul class="mt-4">
-                    <li class="mb-2"><a href="index.html" class="block hover:text-indigo-400 text-2xl mt-10">Home</a></li>
-                    <li class="mb-2"><a href="Myskills.html" class="block hover:text-indigo-400 text-2xl mt-8">My skills</a></li>
-                    <li class="mb-2"><a href="newport2.html" class="block hover:text-indigo-400 text-2xl mt-8">About me</a></li>
-                    
-                </ul>
+        <!-- Sidebar -->
+        <div class="absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300" id="sidebar">
+          <!-- Your Sidebar Content -->
+          <div class="p-4">
+            <h1 class="text-4xl font-semibold text-cyan-400">Sidebar</h1>
+            <ul class="mt-4">
+              <li class="mb-2"><a href="index.html" class="block hover:text-indigo-400 text-2xl mt-10">Home</a></li>
+              <li class="mb-2"><a href="Myskills.html" class="block hover:text-indigo-400 text-2xl mt-8">My skills</a></li>
+              <li class="mb-2"><a href="newport2.html" class="block hover:text-indigo-400 text-2xl mt-8">About me</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Content -->
+        <!-- Navbar -->
+        <div class="bg-slate-800">
+          <div class="container mx-auto">
+            <div class="flex justify-between items-center py-4 px-2 bg-slate-800 h-28 w-full">
+              <div class="flex items-center">
+                <img src="picture/Ds_logo.png" alt="Logo" class="h-16 w-16 mr-4">
+                <h1 class="text-3xl font-semibold text-cyan-400 lg:ml-[500px] ">Wongmueng Loachai</h1>
+              </div>
+              <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
             </div>
           </div>
-  
-          <!-- Content -->
-          
-              <!-- Navbar -->
-              <div class="bg-slate-800 shadow">
-                  <div class="container mx-auto">
-                      <div class="flex justify-between items-center py-4 px-2 bg-slate-800 h-28">
-                          <h1 class="text-2xl font-semibold text-cyan-400">Wongmueng Loachai</h1>
-  
-                          <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
-                          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                          </svg>
-                      </button>
-                      </div>
-                  </div>
-              </div>
-              <!-- Content Body -->
-              
-          
+        </div>
+        <!-- Content Body -->
       </div>
   
       <script>
-          const sidebar = document.getElementById('sidebar');
-      const openSidebarButton = document.getElementById('open-sidebar');
-      
-      openSidebarButton.addEventListener('click', (e) => {
-          e.stopPropagation();
-          sidebar.classList.toggle('-translate-x-full');
-      });
+        const sidebar = document.getElementById('sidebar');
+        const openSidebarButton = document.getElementById('open-sidebar');
+        
+        openSidebarButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sidebar.classList.toggle('-translate-x-full');
+        });
   
-      // Close the sidebar when clicking outside of it
-      document.addEventListener('click', (e) => {
-          if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
-              sidebar.classList.add('-translate-x-full');
-          }
-      });
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
       </script>
-  
-  </div>
-        </section> 
-      <section id="window" class="bg-gray-900 flex" style="height: 1000px; ">
+    </div>
+  </section> 
+      <section id="window" class="bg-gray-900 flex" style="height: 1200px; ">
         <div class="ml-[10%]"">
           <p class="first flex text-4xl text-white font-mono text-cyan" style="margin-top: 124px;">My inspiration</p>
           <div style=" margin-right: 124px;">
             <p class="text-lg mt-6 text-white font-Playfair">Hello,My Nickname is Beaver.As a high school student with a strong passion for coding, technology, and piano, I am a highly motivated and self-driven individual. My journey in the world of technology began early on, and I have continually honed my skills through self-learning and various projects. With a unique blend of technical expertise and musical creativity, I bring a harmonious and innovative approach to every project I undertake.</p>
             <video class="rounded w-[80%] mt-10 h-[40%]" src="skynew.mp4" autoplay loop></video>
+      </section>
+      <section class="flex-col flex-row  px-6 py-12 h-[900px] w-full h-full bg-gray-900 ">
+        <h1 class="text-3xl font-bold mb-10 text-white">My School</h1>
+        
+        <div class="relative border-l-4 border-cyan-600 pl-6">
+            <!-- First  -->
+            <div class="mb-10">
+                <div class="absolute w-6 h-6 rounded-full bg-yellow-400 border-4 border-gray-900 left-[-1.5rem]"></div>
+                <p class="text-sm text-gray-400 mb-2">2009-2018...</p>
+                <h2 class="text-xl font-semibold text-cyan-400">Sarasas Thonburi School</h2>
+                <p class="text-lg text-gray-400">wongmueng loachai</p>
+                <p class="mt-2 text-gray-300">
+                    ได้เข้าเรียนอนุบาล จนถึงประถมศึกษาตอนปลาย ณ โรงเรียนสารสาสน์ธนบุรี แผนกห้องเรียนพิเศษภาษาอังกฤษ(EP) ถึงจบการศึกษาประถมศึกษาตอนปลาย
+                </p>
+            </div>
+
+            <!-- Second  -->
+            <div class="mb-10">
+                <div class="absolute w-6 h-6 rounded-full bg-yellow-400 border-4 border-gray-900 left-[-1.5rem]"></div>
+                <p class="text-sm text-gray-400 mb-2">2018-2024...</p>
+                <h2 class="text-xl font-semibold text-cyan-400">Debsirin School</h2>
+                <p class="text-lg text-gray-400">wongmueng loachai</p>
+                <p class="mt-2 text-gray-300">
+                    ผมได้เข้ารับการคัดเลือกหรือสอบเข้ามาเรียน ณ โรงเรียนเทพศิรินทร์ ใน 3ปี แรกผมได้เข้าเรียนจนจบ แล้วต่อการศึกษาแยกแผนกห้องเรียนที่ โรงเรียนเทพศิรินทร์ แผนกสาขา ศิลป์-ภาษา.
+                </p>
+            </div>
+        </div>
       </section>
       <section class="bg-gray-900 flex md:h-[2000px] h-[1800px] flex-col lg:h-[1400px] ">
         <div class="mt-[10%] ml-[10%] text-white text-4xl">
@@ -100,6 +122,7 @@
               </div>
           </div>
       </div>
+      
       <div class="flex flex-col lg:flex-row mt-20 items-center lg:mt-10 space-y-10 lg:space-y-0 lg:space-x-10">
         <div class="backdrop-sepia-0 rounded-2xl w-full lg:w-1/3 h-64 lg:h-96">
             <div class="w-full h-full">
